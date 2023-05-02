@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario - Agregar Medico</title>
+</head>
+<body>
+     <p> Estamos buscando el: {{medico}}</p>
+     {% if medico %} 
+     <ul>
+     {% for medico in medico %} 
+         <li>{{medico.nombre}}</li>
+         <li>{{medico.medico}}</li>
+     {% endfor %}
+     </ul>
+     {% else %}
+     <p> No hay datos con esa descripcion</p>
+     {% endif %}
+     <p style="color:red;">{{respuesta}}</p>
+</body>
+</html>
